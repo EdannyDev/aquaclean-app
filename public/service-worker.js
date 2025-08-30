@@ -102,7 +102,7 @@ self.addEventListener('push', (event) => {
 });
 
 self.addEventListener('message', (event) => {
-  const allowedOrigins = ['https://aquaclean-app.vercel.app'];
+  const allowedOrigins = ['http://localhost:3000'];
 
   if (allowedOrigins.includes(event.origin)) {
     console.log('Mensaje recibido desde la página web:', event.data);
