@@ -48,7 +48,7 @@ export default function App({ Component, pageProps }) {
             const { endpoint, expirationTime, keys } = subscription.toJSON();
 
             await axios.post(
-              "http://localhost:5000/api/push/subscribe",
+              "https://backend-aquaclean-c2kg.onrender.com/api/push/subscribe",
               {
                 subscriptionId,
                 endpoint,
