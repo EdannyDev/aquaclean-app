@@ -78,7 +78,7 @@ const ContactForm = () => {
     }
 
     try {
-      const response = await axios.post('https://backend-aquaclean-c2kg.onrender.com/api/contact', formData);
+      const response = await axios.post('http://localhost:5000/api/contact', formData);
       setNotification({ type: 'success', message: 'Mensaje enviado exitosamente' });
 
       setFormData({
@@ -103,7 +103,7 @@ const ContactForm = () => {
 
   const sendPushNotification = async (subscriptionId) => {
     try {
-      await axios.post('https://backend-aquaclean-c2kg.onrender.com/api/push/send-notification', {
+      await axios.post('http://localhost:5000/api/push/send-notification', {
         subscriptionId,
         title: '¡Gracias por contactarnos!',
         message: 'Tu mensaje ha sido enviado correctamente.',
@@ -121,7 +121,7 @@ const ContactForm = () => {
     const storedData = localStorage.getItem('contactFormData');
     if (storedData) {
       const data = JSON.parse(storedData);
-      axios.post('https://backend-aquaclean-c2kg.onrender.com/api/contact', data)
+      axios.post('http://localhost:5000/api/contact', data)
         .then(() => {
           setNotification({ type: 'success', message: 'Mensaje enviado exitosamente' });
           localStorage.removeItem('contactFormData');
