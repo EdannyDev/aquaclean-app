@@ -49,4 +49,4 @@ http://localhost:3000
 ## 🔗Enlaces útiles
 Backend: https://github.com/EdannyDev/backend-aquaclean
 
-Panel Administrativo: https://github.com/EdannyDev/admin-aquaclean-app
+Panel Administrativo: https://github.com/EdannyDev/frontend-admin-aquaclean
